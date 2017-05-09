@@ -1,7 +1,7 @@
 Vue.component('chart-item', {
   props: ['height', 'title'],
   template: `<li  style='height: {height} ;' title=' { title } '>
-  <div class="percent">{{height}}<span>%</span></div><div class="skill">{{title}}</div></li>`
+ <div class="skill">{{title}}</div></li>`
 })
 
 var app = new Vue({
