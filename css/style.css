@@ -54,7 +54,8 @@ body {
   margin: 0 auto emCalc(-32px); }
   .chart .bar-container {
     height: 400px;
-    display: inline-block; }
+    display: inline-table;
+    margin-right: 2px; }
   .chart .bar-container li {
     display: block;
     height: 125px;
