@@ -14,12 +14,47 @@ $lime:          #97f464;
 $peach:         lighten($orange, 20%);
 $grape:         #ab64f4;
 
-
+// fadeInUp Animation 
+    .fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInUp {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 
 
   
   // STYLES
 
-  body { font-family: 'Open Sans', sans-serif; }
+  body { font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+   }
 #app{
   width: 1024px;
   margin: 0 auto;
@@ -54,7 +89,7 @@ $grape:         #ab64f4;
    
       display: inline-block;
       height: 425px;
-	        margin: 0 5px 0 0;
+	        margin: 0 3px 0 0;
     width: 8px;
   
   }
@@ -84,7 +119,7 @@ $grape:         #ab64f4;
   }
   .skill {
     font-weight: 800;
-    opacity: .5;
+    opacity: .3;
    
     text-transform: uppercase;
     width: 100%;

@@ -9,7 +9,7 @@ var app = new Vue({
   data: {
     data: {},
     settings: {},
-    maxHeight: 0,
+    maxHeight: 1000,
     colors: []
 
   },

@@ -7,29 +7,31 @@
 </head>
 
 <body>
-    <div id="app">
-<h1>{{settings.label}}</h1>
-        <ul class="chart">
+    <div id="app" class="">
+        <h1>{{settings.label}}</h1>
+        <ul class="chart  ">
             <li class="axis">
-                <div class="label">1000</div>
-                <div class="label">750</div>
-                <div class="label">500</div>
-                <div class="label">250 </div>
+                <div class="label">{{ maxHeight }}</div>
+                <div class="label">{{ ( maxHeight * 3 ) / 4  }}</div>
+                <div class="label">{{ maxHeight / 2 }}</div>
+                <div class="label">{{ maxHeight / 1 }} </div>
                 <div class="label">0</div>
             </li>
-<div v-if="date"  class="bar-container" v-for="(date, index) in data.DAILY.dates" >
-<li  :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'"    class="bar teal" >
- <div class="skill">{{ data.DAILY.dataByMember.players.john.points[index] }}</div></li>
- <li  :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'"    class="bar salmon" >
- <div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div></li>
-</div>
-<!--
+            <div  class="bar-container " v-for="(date, index) in data.DAILY.dates">
+                <li :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'" class="bar teal fadeInUp">
+                    <div class="skill ">{{ data.DAILY.dataByMember.players.john.points[index] }}</div>
+                </li>
+                <li :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'" class="bar salmon fadeInUp">
+                    <div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div>
+                </li>
+            </div>
+            <!--
             <chart-item v-for="(index, date) in data.DAILY.dates" class="bar teal" height="50%" title="{{date}}">
             </chart-item>-->
         </ul>
-     
 
-    
+
+
 
     </div>
 
