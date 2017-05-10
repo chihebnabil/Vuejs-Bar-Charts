@@ -2,40 +2,80 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Online Playing Platform
+
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <div id="app" class="">
         <h1>{{settings.label}}</h1>
+        <p>Bar Chart Comparing <span class="player-1 fadeInUp"> {{settings.dictionary.john.firstname}} {{settings.dictionary.john.lastname}} </span>            &
+            <span class="player-2 fadeInUp">  {{settings.dictionary.larry.firstname}} {{settings.dictionary.larry.lastname}} </span>            </p>
         <ul class="chart  ">
             <li class="axis">
                 <div class="label">{{ maxHeight }}</div>
-                <div class="label">{{ ( maxHeight * 3 ) / 4  }}</div>
+                <div class="label">{{ ( maxHeight * 3 ) / 4 }}</div>
                 <div class="label">{{ maxHeight / 2 }}</div>
                 <div class="label">{{ maxHeight / 1 }} </div>
                 <div class="label">0</div>
             </li>
-            <div  class="bar-container " v-for="(date, index) in data.DAILY.dates">
-                <li :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'" class="bar teal fadeInUp">
-                    <div class="skill ">{{ data.DAILY.dataByMember.players.john.points[index] }}</div>
-                </li>
-                <li :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'" class="bar salmon fadeInUp">
-                    <div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div>
+            <div class="bar-container " v-for="(date, index) in data.DAILY.dates">
+
+                <li v-on:click="showModal = true" :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'" class="bar teal fadeInUp">
+<!--                    <div class="skill ">{{ data.DAILY.dataByMember.players.john.points[index] }}</div>
+-->                </li>
+                <li v-on:click="showModal = true"  :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'" class="bar salmon fadeInUp">
+                    <!--<div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div>-->
                 </li>
             </div>
-            <!--
-            <chart-item v-for="(index, date) in data.DAILY.dates" class="bar teal" height="50%" title="{{date}}">
-            </chart-item>-->
+
         </ul>
 
 
-
+  <modal v-if="showModal" @close="showModal = false">
+    <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+    <h3 slot="header">custom header</h3>
+  </modal>
 
     </div>
 
+<!-- template for the modal component -->
+<script type="text/x-template"  id="modal-template">
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
 
+          <div class="modal-header">
+            
+          </div>
+
+          <div class="modal-body">
+            <slot name="body">
+              default body
+            </slot>
+          </div>
+
+          <div class="modal-footer">
+            <slot name="footer">
+              default footer
+              <button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button>
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</script>
 
 
 
