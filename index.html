@@ -8,17 +8,24 @@
 
 <body>
     <div id="app">
-
+<h1>{{settings.label}}</h1>
         <ul class="chart">
             <li class="axis">
-                <div class="label">MVP</div>
-                <div class="label">All Star</div>
-                <div class="label">Slugger</div>
-                <div class="label">Rookie</div>
-                <div class="label">Triple A</div>
+                <div class="label">1000</div>
+                <div class="label">750</div>
+                <div class="label">500</div>
+                <div class="label">250 </div>
+                <div class="label">0</div>
             </li>
-
-            <chart-item v-for="date in data.DAILY.dates" class="bar teal" height="50%" title="Title"></chart-item>
+<div v-if="date"  class="bar-container" v-for="(date, index) in data.DAILY.dates" >
+<li  :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'"    class="bar teal" >
+ <div class="skill">{{ data.DAILY.dataByMember.players.john.points[index] }}</div></li>
+ <li  :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'"    class="bar salmon" >
+ <div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div></li>
+</div>
+<!--
+            <chart-item v-for="(index, date) in data.DAILY.dates" class="bar teal" height="50%" title="{{date}}">
+            </chart-item>-->
         </ul>
      
 
