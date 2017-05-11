@@ -14,7 +14,7 @@
     <div id="app" class="">
         <h1>{{settings.label}}</h1>
         <p>Bar Chart Comparing <span class="player-1 fadeInUp"> {{settings.dictionary.john.firstname}} {{settings.dictionary.john.lastname}} </span>            &
-            <span class="player-2 fadeInUp">  {{settings.dictionary.larry.firstname}} {{settings.dictionary.larry.lastname}} </span>            </p>
+            <span class="player-2 fadeInUp">  {{settings.dictionary.larry.firstname}} {{settings.dictionary.larry.lastname}} </span>  scores  over time          </p>
         <ul class="chart  ">
             <li class="axis">
                 <div class="label">{{ maxHeight }}</div>
@@ -25,23 +25,26 @@
             </li>
             <div v-if="date" class="bar-container " v-for="(date, index) in data.DAILY.dates">
 
-                <li v-on:click="showModal = true" :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'" class="bar teal fadeInUp">
+                <li  v-on:click="showModal = true" :style="'height :' + data.DAILY.dataByMember.players.john.points[index] / 10 +'%'" class="bar teal fadeInUp">
                     <div v-if="index % 7 === 0  " class="skill ">{{ date | moment }}</div>
                 </li>
                 <li v-on:click="showModal = true"  :style="'height :' + data.DAILY.dataByMember.players.larry.points[index] / 10 +'%'" class="bar salmon fadeInUp">
-                    <!--<div class="skill">{{ data.DAILY.dataByMember.players.larry.points[index] }}</div>-->
                 </li>
             </div>
 
         </ul>
 
 
-  <modal v-if="showModal" @close="showModal = false">
+  <modal v-if="showModal"   @close="showModal = false">
     <!--
       you can use custom content here to overwrite
       default content
     -->
-    <h3 slot="header">custom header</h3>
+    <h3 slot="header">dsds</h3>
+    <h4 slot="body">
+     
+    </h4>
+  
   </modal>
 
     </div>
@@ -54,7 +57,9 @@
         <div class="modal-container">
 
           <div class="modal-header">
-            {{message}}
+            <slot name="header">
+              default body
+            </slot>
           </div>
 
           <div class="modal-body">
