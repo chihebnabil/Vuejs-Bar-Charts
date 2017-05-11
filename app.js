@@ -1,10 +1,6 @@
 // register modal component
 Vue.component('modal', {
-  props: ['name', 'points'],
-  template: '#modal-template',
-  data: {
-    message: 'hello'
-  }
+  template: '#modal-template'
 })
 
 var app = new Vue({
@@ -13,7 +9,8 @@ var app = new Vue({
     data: {},
     settings: {},
     maxHeight: 1000,
-    showModal: false
+    showModal: false,
+    cBar : {}
 
   },
   filters: {
@@ -25,6 +22,20 @@ var app = new Vue({
   methods: {
     moment: function () {
       return moment();
+    },
+    getFullName: function (index) {
+      if(index == 0 ){
+      return this.settings.dictionary.john.firstname +"  "+ this.settings.dictionary.john.lastname;
+
+      }else{
+              return this.settings.dictionary.larry.firstname +"  "+ this.settings.dictionary.larry.lastname;
+
+      }
+    },
+    setModal: function (player,date,points) {
+      this.cBar.player = this.getFullName(player)
+      this.cBar.points = points
+      this.cBar.date = date
     },
 
     getPercent: function (height) {

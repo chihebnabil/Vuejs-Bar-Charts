@@ -175,7 +175,9 @@ $grape:         #ab64f4;
 .modal-default-button {
   float: right;
 }
-
+.modal-footer{
+  padding: 5px;
+}
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
