@@ -1,7 +1,10 @@
 // register modal component
 Vue.component('modal', {
   props: ['name', 'points'],
-  template: '#modal-template'
+  template: '#modal-template',
+  data: {
+    message: 'hello'
+  }
 })
 
 var app = new Vue({
@@ -13,8 +16,16 @@ var app = new Vue({
     showModal: false
 
   },
+  filters: {
+    moment: function (date) {
+      return moment(date).format('MM/DD/YYYY');
+    }
+  }
+  ,
   methods: {
-
+    moment: function () {
+      return moment();
+    },
 
     getPercent: function (height) {
       // console.log('getPercent(%o)', height);
