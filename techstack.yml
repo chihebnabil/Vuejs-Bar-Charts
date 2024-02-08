@@ -1,0 +1,171 @@
+repo_name: chihebnabil/Vuejs-Bar-Charts
+report_id: 7023dd9c20ed37fc794ae3194e8ac6a4
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-08T19:19:07+00:00'
+requested_by: chihebnabil
+provider: github
+branch: master
+detected_tools_count: 11
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts
+  detection_source: Repo Metadata
+- name: Vue.js
+  description: A progressive framework for building user interfaces
+  website_url: http://vuejs.org/
+  version: 2.3.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript MVC Frameworks
+  image_url: https://img.stackshare.io/service/3837/paeckCWC.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-09 21:47:58.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts
+  detection_source: Repo Metadata
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 3.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-11 09:21:59.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-09 21:47:58.000000000 Z
+- name: Moment.js
+  description: A JavaScript date library for parsing, validating, manipulating, and
+    formatting dates
+  website_url: http://momentjs.com/
+  version: 2.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/service/3643/Xrtdc94q_400x400.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-11 09:21:59.000000000 Z
+- name: gulp-sass
+  description: Gulp plugin for sass
+  package_url: https://www.npmjs.com/gulp-sass
+  version: 3.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16002/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-11 09:21:59.000000000 Z
+- name: moment
+  description: Parse, validate, manipulate, and display dates
+  package_url: https://www.npmjs.com/moment
+  version: 2.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15847/default_4479dbac220be99e50e724b2df6cf415241d71fd.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-11 09:21:59.000000000 Z
+  vulnerabilities:
+  - name: 'Path Traversal: ''dir/../../filename'' in moment.locale'
+    cve_id: CVE-2022-24785
+    cve_url: https://github.com/advisories/GHSA-8hfj-j24r-96c4
+    detected_date: Apr 9
+    severity: high
+    first_patched: 2.29.2
+  - name: Moment.js vulnerable to Inefficient Regular Expression Complexity
+    cve_id: CVE-2022-31129
+    cve_url: https://github.com/advisories/GHSA-wc69-rhjr-hc9g
+    detected_date: Jul 7
+    severity: high
+    first_patched: 2.29.4
+  - name: Regular Expression Denial of Service in moment
+    cve_id: CVE-2017-18214
+    cve_url: https://github.com/advisories/GHSA-446m-mv8f-q348
+    detected_date: Aug 22
+    severity: high
+    first_patched: 2.19.3
+- name: vue
+  description: Vue
+  package_url: https://www.npmjs.com/vue
+  version: 2.3.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15844/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-09 21:47:58.000000000 Z
+- name: vue-resource
+  description: The HTTP client for Vue.js
+  package_url: https://www.npmjs.com/vue-resource
+  version: 1.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17154/default_fbe883dfc6d978f82179fa11bdf634af1b6751fa.png
+  detection_source_url: https://github.com/chihebnabil/Vuejs-Bar-Charts/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: chihebnabil
+  last_updated_on: 2017-05-09 21:47:58.000000000 Z
